@@ -27,6 +27,14 @@ sudo docker build --platform linux/386 -t imiric/docker-java8-32bit .
    You might be prompted to accept the HTTPS certificate, to accept the application
    signature and to run the application. 
 
+   If you run into any permission issues connecting to the X server, such as
+   `Can't open display` or `Authorization required`, allow local connections with:
+
+   ```shell
+   xhost +local:
+   ```
+
+   Then when you're done enable access control again with `xhost -`.
 
 ## License
 
